@@ -20,7 +20,7 @@ rateOption.forEach ((btn) => {
 submitBtn.addEventListener('click', () => {
     const rateSelect = document.querySelector('.selected');
     if (rateSelect) {
-        const rateValue = rateSelect.value;
+        const rateValue = rateSelect.dataset.value;
         const message = document.querySelector('[data-result]');
         let result = `You selected ${rateValue} out of 5`;
 
