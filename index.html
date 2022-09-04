@@ -13,33 +13,37 @@
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
-  <h1 class="sr-only">Let us know your opinion.</h1>
-  <div class="main-window flexcol" id="rate-me"aria-label="costumer satisfaction">
-    <p aria-hidden="true"><i class="circle star fa-solid fa-star"></i></p>
-    <h2 class="fs-tittle">How did we do?</h2>
-    <p class="fs-p">
-      Please let us know how we did with your support request. 
-      All feedback is appreciated to help us improve our offering!
-    </p>
-    <ul id="rating" aria-label="rating scale from 1 to 5" class="flexrow">
-      <li value="1" class="circle" data-rating aria-checked="false" role="rating select">1</li>
-      <li value="2" class="circle" data-rating aria-checked="false" role="rating select">2</li>
-      <li value="3" class="circle" data-rating aria-checked="false" role="rating select">3</li>
-      <li value="4" class="circle" data-rating aria-checked="false" role="rating select">4</li>
-      <li value="5" class="circle" data-rating aria-checked="false" role="rating select">5</li>
-    </ul>
-    <p id="warning" aria-hidden="true">*Please, select a rating</p>
-    <button type="button" aria-label="submit button" class="fs-tittle" id="submit-btn">Submit</button>
-  </div>
-  <div class="main-window flexcol hidden" id="thank-you" aria-label="rating submitted">
-    <figure>
-      <img src="./images/illustration-thank-you.svg" aria-hidden='true'/>
-    </figure>
-    <p class="fs-p result" data-result>You selected ${rateValue} out of 5</p>
-    <h2 class="fs-tittle">Thank you!</h2>
-    <p class="fs-p">We appreciate you taking the time to give a rating. If you ever need more support, 
-      don&apos;t hesitate to get in touch!</p>
-  </div>
+  <header>
+    <h1 class="sr-only">Let us know your opinion.</h1>
+  </header>
+  <main>
+    <div class="main-window flexcol" id="rate-me"aria-label="costumer satisfaction">
+      <p aria-hidden="true"><i class="circle star fa-solid fa-star"></i></p>
+      <h2 class="fs-tittle">How did we do?</h2>
+      <p class="fs-p">
+        Please let us know how we did with your support request. 
+        All feedback is appreciated to help us improve our offering!
+      </p>
+      <ul id="rating" aria-label="scale from 1 to 5" aria-multiselectable="false" class="flexrow">
+        <li value="1" class="circle" data-rating aria-selected="false" role="option">1</li>
+        <li value="2" class="circle" data-rating aria-selected="false" role="option">2</li>
+        <li value="3" class="circle" data-rating aria-selected="false" role="option">3</li>
+        <li value="4" class="circle" data-rating aria-selected="false" role="option">4</li>
+        <li value="5" class="circle" data-rating aria-selected="false" role="option">5</li>
+      </ul>
+      <p id="warning" aria-hidden="true">*Please, select a rating</p>
+      <button type="button" aria-label="submit button" class="fs-tittle" id="submit-btn">Submit</button>
+    </div>
+    <div class="main-window flexcol hidden" id="thank-you" aria-label="submitted">
+      <figure>
+        <img src="./images/illustration-thank-you.svg" alt='sent icon'aria-hidden='true'/>
+      </figure>
+      <p class="fs-p result" data-result>You selected ${rateValue} out of 5</p>
+      <h2 class="fs-tittle">Thank you!</h2>
+      <p class="fs-p">We appreciate you taking the time to give a rating. If you ever need more support, 
+        don&apos;t hesitate to get in touch!</p>
+    </div>
+  </main>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> 
