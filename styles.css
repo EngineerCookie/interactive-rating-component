@@ -1,0 +1,240 @@
+/*
+## Colors
+
+### Primary
+
+- Orange: hsl(25, 97%, 53%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+
+- font-family: 'Overpass', sans-serif;
+- Weights: 400, 700
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root { /*VARIABLES*/
+    /*MAIN COLOR*/
+    --color-orange: hsl(25, 97%, 53%); /*ICONS AND BUTTONS*/
+    /*SECONDARY COLORS*/
+    --color-white: hsl(0, 0%, 100%); /*TITTLES*/
+    --color-grey-light: hsl(217, 12%, 63%); /*PARAGRAPHS*/
+    --color-grey-medium: hsl(216, 12%, 22%); /*INACTIVE BUTTONS*/
+    --color-blue-dark: hsl(213, 19%, 18%); /*POPUP BACKGROUN*/
+    --color-blue-darker: hsl(216, 12%, 8%); /*FULL BACKGROUN COLOR*/
+    /*FONT SIZES AND STUFFS*/
+    --fontSize-tittle: 1.8rem;
+    --fontSize-p: 1rem;
+    --font-line-height: 1.6rem;
+}
+
+/*UTILITY CLASSES START*/
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    -webkit-clip-path: inset(50%) !important;
+    height: 1px !important;
+    width: 1px !important;
+    position: absolute !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+.fs-tittle {
+    font-size: var(--fontSize-tittle);
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0;
+    padding-top: 0.5rem;
+}
+
+.fs-p {
+    font-size: var(--fontSize-p);
+    font-weight: 400;
+    line-height: var(--font-line-height);
+}
+
+.circle {
+    background-color: var(--color-grey-medium);
+    padding: 1rem;
+    margin-bottom: 1.3rem;
+    border-radius: 50%;
+}
+
+/*UTILITY CLASSES END*/
+
+body {
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-grey-light);
+    background-color: var(--color-blue-darker);
+}
+
+.main-window {
+    background-color: var(--color-blue-dark);
+    position: absolute;
+    width: clamp(330px, 90vw, 425px); 
+    height: clamp(360px, 60vh, 425px); 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 1.9rem 2rem 2rem 1.9rem;
+}
+
+.main-window.hidden {
+    display: none;
+}
+
+.main-window > p:first-child {
+    margin: 0;
+}
+
+.star {
+    color: var(--color-orange);
+}
+
+#rating {
+    margin: 0;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 2rem 0; /*PADDING BOTTOM RESPONSIVE*/
+}
+
+#rating > li {
+    padding: 1rem 1.4rem;
+    margin-bottom: 0;
+}
+
+#rating > li:hover {
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    cursor: pointer;
+}
+
+#rating > li.selected {
+    background-color: var(--color-grey-light);
+    color: var(--color-white);
+}
+
+#submit-btn {
+    font-size: 1rem;
+    background-color: var(--color-orange);
+    text-transform: uppercase;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem; 
+    border: none;
+    border-radius: 25px;
+    font-family: 'Overpass', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+#submit-btn:hover {
+    color: var(--color-orange);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+#warning {
+    display: none;
+    position: absolute;
+    bottom: 0;
+}
+
+#warning.active {
+    display: block;
+    color: var(--color-white);
+}
+
+#thank-you {
+    justify-content: center;
+    align-items: center;
+}
+
+#thank-you > p:last-child {
+    text-align: center;
+}
+
+.result {
+    color: var(--color-orange);
+    background-color: var(--color-grey-medium);
+    border-radius: 20px;
+    padding: 3px 1rem;
+}
+
+/*FOOTER START*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 0.5rem;
+    background-color: var(--color-blue-dark);
+    border-radius: 10px; 
+}
+
+.attribution a { 
+    color: var(--color-orange);
+    text-decoration: none; 
+}
+/*FOOTER END*/
+
+@media (max-width: 600px), (max-height: 700px) {
+    .circle {
+        margin-bottom: 0;
+    }
+    .main-window {
+        padding: 1.5rem 1.5rem 2rem 1.3rem;
+    }
+    
+    #rating {
+        padding: 0 0 1rem 0;
+    }
+
+    .attribution {
+        translate: -50% -20%;
+    }
+
+    .attribution > a::after {
+        content: '\a';
+        white-space: pre;
+    }
+    
+}
