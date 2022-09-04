@@ -47,8 +47,8 @@ Mobile submit
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/EngineerCookie/interactive-rating-component](https://github.com/EngineerCookie/interactive-rating-component)
+- Live Site URL: [https://engineercookie.github.io/interactive-rating-component/](https://engineercookie.github.io/interactive-rating-component/)
 
 ## My process
 
@@ -62,10 +62,7 @@ Mobile submit
 
 ### Continued development
 
-Tried to implement screen-reader accessibility. 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Tried to implement screen-reader accessibility. Not sure if done correctly. Also, couldn't get the numbers centered inside the circles.
 
 ### Useful resources
 

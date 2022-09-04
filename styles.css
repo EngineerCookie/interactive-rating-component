@@ -1,32 +1,3 @@
-/*
-## Colors
-
-### Primary
-
-- Orange: hsl(25, 97%, 53%)
-
-### Neutral
-
-- White: hsl(0, 0%, 100%)
-- Light Grey: hsl(217, 12%, 63%)
-- Medium Grey: hsl(216, 12%, 54%)
-- Dark Blue: hsl(213, 19%, 18%)
-- Very Dark Blue: hsl(216, 12%, 8%)
-
-## Typography
-
-### Body Copy
-
-- Font size (paragraph): 15px
-
-### Font
-
-- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
-
-- font-family: 'Overpass', sans-serif;
-- Weights: 400, 700
-*/
-
 *,
 *::before,
 *::after {
@@ -35,13 +6,13 @@
 
 :root { /*VARIABLES*/
     /*MAIN COLOR*/
-    --color-orange: hsl(25, 97%, 53%); /*ICONS AND BUTTONS*/
+    --color-orange: hsl(25, 97%, 53%); 
     /*SECONDARY COLORS*/
-    --color-white: hsl(0, 0%, 100%); /*TITTLES*/
-    --color-grey-light: hsl(217, 12%, 63%); /*PARAGRAPHS*/
-    --color-grey-medium: hsl(216, 12%, 22%); /*INACTIVE BUTTONS*/
-    --color-blue-dark: hsl(213, 19%, 18%); /*POPUP BACKGROUN*/
-    --color-blue-darker: hsl(216, 12%, 8%); /*FULL BACKGROUN COLOR*/
+    --color-white: hsl(0, 0%, 100%); 
+    --color-grey-light: hsl(217, 12%, 63%); 
+    --color-grey-medium: hsl(216, 12%, 22%); 
+    --color-blue-dark: hsl(213, 19%, 18%);
+    --color-blue-darker: hsl(216, 12%, 8%);
     /*FONT SIZES AND STUFFS*/
     --fontSize-tittle: 1.8rem;
     --fontSize-p: 1rem;
@@ -114,6 +85,7 @@ body {
     left: 50%;
     translate: -50% -50%;
     padding: 1.9rem 2rem 2rem 1.9rem;
+    border-radius: 25px;
 }
 
 .main-window.hidden {
@@ -133,7 +105,7 @@ body {
     list-style: none;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0 2rem 0; /*PADDING BOTTOM RESPONSIVE*/
+    padding: 0 0 2rem 0; 
 }
 
 #rating > li {
